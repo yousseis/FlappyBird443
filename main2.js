@@ -1,8 +1,8 @@
 
-var BootState = require('./states/boot');
-var MenuState = require('./states/menu');
-var PlayState = require('./states/play');
-var PreloadState = require('./states/preload');
+var BootState = require('./states/boot.js');
+var MenuState = require('./states/menu.js');
+var PlayState = require('./states/play.js');
+var PreloadState = require('./states/preload.js');
 
 var game = new Phaser.Game(400, 490);
 
