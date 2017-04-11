@@ -2,12 +2,34 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Group Five Flappy</title>
-        <script type="text/javascript" src="phaser.min.js"></script>
-        <script type="text/javascript" src="main.js"></script>
+        <title>Flappy Marco</title>
+        <script src="phaser.min.js"></script>
+        <script src="states/Boot.js"></script>
+        <script src="states/Preloader.js"></script>
+        <script src="states/MainMenu.js"></script>
+        <script src="states/Game.js"></script>
     </head>
 
     <body>
+      <div id="flappyMarcos"></div>
+      <script type="text/javascript">
 
+      window.onload = function(){
+        // Initialize Phaser, and create a 400px by 490px game
+        var game = new Phaser.Game(400, 490, Phaser.AUTO,"flappyMarcos");
+
+        //Add states to game
+        game.state.add('Boot', BasicGame.Boot);
+	      game.state.add('Preloader', BasicGame.Preloader);
+	      game.state.add('MainMenu', BasicGame.MainMenu);
+	      game.state.add('Game', BasicGame.Game);
+
+        //Start Boot state of game
+        game.state.start('Boot');
+      };
+
+      </script>
     </body>
+
+
 </html>
