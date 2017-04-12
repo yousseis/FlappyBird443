@@ -1,7 +1,10 @@
-BasicGame.MainMenu = function (game) {
+BasicGame.gameover = function (game) {
 };
 
-BasicGame.MainMenu.prototype = {
+BasicGame.gameover.prototype = {
+  preload: function(){
+    
+  },
 	create: function () {
 
 			this.background = this.add.sprite(0,0,'background');

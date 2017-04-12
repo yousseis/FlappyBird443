@@ -8,15 +8,15 @@
         <script src="states/Preloader.js"></script>
         <script src="states/MainMenu.js"></script>
         <script src="states/Game.js"></script>
+          <link href="styles.css" rel="stylesheet" type="text/css">
     </head>
 
     <body>
-      <div id="flappyMarcos"></div>
+      <div id="flappyMarco"></div>
       <script type="text/javascript">
-
       window.onload = function(){
         // Initialize Phaser, and create a 400px by 490px game
-        var game = new Phaser.Game(400, 490, Phaser.AUTO,"flappyMarcos");
+        var game = new Phaser.Game(BasicGame.Params.baseWidth, BasicGame.Params.height, Phaser.AUTO,'flappyMarco');
 
         //Add states to game
         game.state.add('Boot', BasicGame.Boot);
