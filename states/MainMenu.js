@@ -2,19 +2,16 @@
 BasicGame.MainMenu = function (game) {
 
 	this.bg;
-	this.startButton;
+
 
 };
 
 BasicGame.MainMenu.prototype = {
 	create: function () {
 
-	    this.bg = this.add.tileSprite(0, 0, this.game.width, this.game.height, 'background');
-
-      // add our start button with a callback
-        this.startButton = this.add.button(this.game.width/2, 300, 'startButton', this.startClick, this);
-        this.startButton.anchor.setTo(0.5,0.5);
-
+			this.background = this.add.image(0, 0, "background");
+			this.background.height = this.game.height;
+			this.background.width = this.game.width;
 	},
 
 	update: function () {
